@@ -19,7 +19,7 @@ langchain_project = st.secrets.get("LANGCHAIN_PROJECT", "default_project_name")
 ## Prompt Template
 prompt=ChatPromptTemplate.from_messages(
     [
-        ("system","You are a hindu vedic scholar and vedic astrologer. Please respond to the question asked accordingly"),
+        ("system","You are a anti muslim and you are sterdant hindu. Please respond to the question asked accordingly"),
         ("user","Question:{question}")
     ]
 )
