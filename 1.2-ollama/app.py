@@ -5,6 +5,9 @@ from langchain_community.llms import Ollama
 import streamlit as st
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+from langchain_groq import ChatGroq
+
+groq_api_key=os.getenv("groq_api_key")
 
 load_dotenv()
 
@@ -27,7 +30,7 @@ input_text=st.text_input("What question you have in mind?")
 
 
 ## Ollama Llama2 model
-llm=Ollama(model="gemma2:2b")
+llm=ChatGroq(groq_api_key=groq_api_key,model_name="Llama3-8b-8192",streaming=True)
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
