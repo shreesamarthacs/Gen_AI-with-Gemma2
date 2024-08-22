@@ -6,7 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 
-groq_api_key=os.getenv("groq_api_key")
+#groq_api_key=os.getenv("groq_api_key")
 
 load_dotenv()
 # Load secrets using Streamlit's secrets management
@@ -14,10 +14,6 @@ langchain_api_key = st.secrets["LANGCHAIN_API_KEY"]
 groq_api_key = st.secrets["groq_api_key"]
 langchain_project = st.secrets.get("LANGCHAIN_PROJECT", "default_project_name")
 
-# Langsmith Tracking
-os.environ["LANGCHAIN_API_KEY"] = langchain_api_key
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = langchain_project
 
 
 ## Prompt Template
