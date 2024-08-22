@@ -19,13 +19,13 @@ langchain_project = st.secrets.get("LANGCHAIN_PROJECT", "default_project_name")
 ## Prompt Template
 prompt=ChatPromptTemplate.from_messages(
     [
-        ("system","You are an expert. Please respond to the question asked"),
+        ("system","You are a spiritual hindu guru. Please respond to the question asked"),
         ("user","Question:{question}")
     ]
 )
 
 ## streamlit framework
-st.title("GenAI With LLaMA Model")
+st.title("GenAI with LLaMA Model")
 input_text=st.text_input("What question you have in mind?")
 
 
