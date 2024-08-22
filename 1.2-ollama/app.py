@@ -16,7 +16,7 @@ os.environ["LANGCHAIN_PROJECT"]=os.getenv("LANGCHAIN_PROJECT")
 ## Prompt Template
 prompt=ChatPromptTemplate.from_messages(
     [
-        ("system","You are a helpful assistant. Please respond to the question asked"),
+        ("system","You are a expert in all fields. Please respond to the question asked"),
         ("user","Question:{question}")
     ]
 )
